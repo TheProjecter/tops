@@ -1,0 +1,7 @@
+# The MARVELS Instrument Interface #
+
+The MARVELS instrument is already in operation at APO using a dedicated control computer. The MARVELS control computer provides a nice GUI that supports two modes of operation: a MANUAL mode where experts can access most of the MARVELS functionality at a relatively low level, and an AUTOMATIC mode for performing normal observing activities. The MARVELS proxy will interact with MARVELS exclusively in the AUTOMATIC mode, although it will accomplish this via a network protocol rather than the GUI.
+
+A preliminary specification of the MARVELS [proxy states](http://positron.ps.uci.edu/~dkirkby/sdss3-17Jul08/marvels.html) and [archiving channels](http://positron.ps.uci.edu/~dkirkby/sdss3-17Jul08/marvels-data.html) was [discussed on 27 Jun 2008](http://positron.ps.uci.edu/~dkirkby/marvels-27Jun08/), together with a first pass at use cases. The source material used to generate all of the design web pages at these links is in the TOPS code repository under [tops/sdss3/design/](http://code.google.com/p/tops/source/browse/#svn/trunk/sdss3/design).
+
+The implementation plan for the MARVELS proxy is to re-use the existing GUI logic for issuing the appropriate low-level commands in response to a high-level AUTOMATIC-mode command. The details of how the MARVELS proxy will communicate with the control computer have not yet been worked out but will presumably be chosen to make the implementation as straightforward as possible.
